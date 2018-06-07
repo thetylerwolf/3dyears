@@ -1,0 +1,38 @@
+{
+  "name": "aframe-boilerplate",
+  "description": "Boilerplate for creating WebVR scenes using A-Frame",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "budo index.js:bundle.js --live --verbose --port 3000 --open",
+    "deploy": "ghpages",
+    "ghpages": "ghpages"
+  },
+  "devDependencies": {
+    "budo": "^7.0.0",
+    "ghpages": "0.0.3",
+    "glslify": "^5.1.0"
+  },
+  "keywords": [
+    "aframe",
+    "aframe-example",
+    "aframe-scene",
+    "aframe-boilerplate"
+  ],
+  "browserify": {
+    "transform": [
+      "glslify"
+    ]
+  },
+  "dependencies": {
+    "glsl-diffuse-lambert": "^1.0.0",
+    "glsl-face-normal": "^1.0.2",
+    "glsl-inverse": "^1.0.0",
+    "glsl-noise": "0.0.0",
+    "glsl-perturb-normal": "^1.0.2",
+    "glsl-specular-phong": "^1.0.0",
+    "glsl-transpose": "^1.0.0",
+    "postprocessing": "^2.0.0",
+    "three": "^0.80.1"
+  }
+}
