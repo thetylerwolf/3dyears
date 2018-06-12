@@ -1,6 +1,6 @@
 {
-  "name": "aframe-boilerplate",
-  "description": "Boilerplate for creating WebVR scenes using A-Frame",
+  "name": "cubes",
+  "description": "",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
@@ -14,10 +14,6 @@
     "glslify": "^5.1.0"
   },
   "keywords": [
-    "aframe",
-    "aframe-example",
-    "aframe-scene",
-    "aframe-boilerplate"
   ],
   "browserify": {
     "transform": [

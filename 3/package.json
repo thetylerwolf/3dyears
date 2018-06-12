@@ -1,6 +1,6 @@
 {
-  "name": "icosahedral",
-  "description": "1",
+  "name": "cubictubic",
+  "description": "",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
@@ -29,6 +29,6 @@
     "glsl-perturb-normal": "^1.0.2",
     "glsl-specular-phong": "^1.0.0",
     "glsl-transpose": "^1.0.0",
-    "three": "^0.80.1"
+    "three": "^0.87.1"
   }
 }
