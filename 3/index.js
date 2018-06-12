@@ -155,7 +155,7 @@ var nMax,
 
 function animate( time ) {
 
-    nEnd = ( nEnd + nStep ) % nMax;
+    nEnd = Math.min( nEnd + nStep, nMax );
 
     mesh.geometry.setDrawRange( 0, nEnd );
 
