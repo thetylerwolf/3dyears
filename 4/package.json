@@ -1,0 +1,40 @@
+{
+  "name": "meshbuilder",
+  "description": "",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "budo index.js:bundle.js --live --verbose --port 3000 --open -- -t [ babelify ]",
+    "build":  "browserify -t [ babelify ] index.js > ./bundle.js",
+    "deploy": "ghpages",
+    "ghpages": "ghpages"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babelify": "^8.0.0",
+    "browserify": "^16.2.2",
+    "budo": "^11.3.2",
+    "ghpages": "0.0.3",
+    "glslify": "^5.1.0"
+  },
+  "keywords": [],
+  "browserify": {
+    "transform": [
+      "glslify"
+    ]
+  },
+  "dependencies": {
+    "cannon": "^0.6.2",
+    "d3-fetch": "^1.1.2",
+    "d3-scale": "^3.0.0",
+    "glsl-diffuse-lambert": "^1.0.0",
+    "glsl-face-normal": "^1.0.2",
+    "glsl-inverse": "^1.0.0",
+    "glsl-noise": "0.0.0",
+    "glsl-perturb-normal": "^1.0.2",
+    "glsl-specular-phong": "^1.0.0",
+    "glsl-transpose": "^1.0.0",
+    "three": "^0.104.0"
+  }
+}
