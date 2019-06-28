@@ -74,7 +74,7 @@ function buildUI() {
     container.style.textAlign = 'right';
     container.style.fontFamily = 'Arimo';
     container.style.fontWeight = 'bold';
-    container.style.opacity = 0.5;
+    container.style.opacity = 0.2;
 
     var cityTitle = container.appendChild(document.createElement('div'));
     cityTitle.innerHTML = 'Stockholm';
@@ -55354,7 +55354,11 @@ var noise = new _perlinNoiseSimplex2.default();
 var colors = [
 // '#2874B6',
 // '#39A019',
-'#FFAF00', '#B62828', '#333'];
+// '#FFAF00',
+// '#B62828',
+// '#333',
+// '#FFF'
+'#1c5282', '#c78800'];
 
 var RectTapestry = function () {
     function RectTapestry() {
