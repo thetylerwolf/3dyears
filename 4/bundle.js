@@ -55351,14 +55351,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 var noise = new _perlinNoiseSimplex2.default();
 
-var colors = [
-// '#2874B6',
-// '#39A019',
+var colors = ['#2874B6', '#39A019',
 // '#FFAF00',
 // '#B62828',
 // '#333',
 // '#FFF'
-'#1c5282', '#c78800'];
+// '#1c5282',
+// '#c78800',
+'#256a11'];
 
 var RectTapestry = function () {
     function RectTapestry() {
