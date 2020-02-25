@@ -18,7 +18,9 @@ const tapestry = new RectTapestry()
 
 let camera, scene, renderer
 
-let windSpeed
+let urlParams = new URLSearchParams(window.location.search)
+let windSpeed, forceSpeed = urlParams.get('speed')
+
 
 // colors : '#a4036f' '#16db93' '#2364aa' '#fec601' '#ea7317'
 
@@ -99,16 +101,17 @@ function getWindData( speedEl, recurse ) {
         .then(data => {
             windSpeed = +data.wind.speed
             speedEl.innerHTML = windSpeed
-            tapestry.multiplier = interpolateWindSpeed( windSpeed )
+            tapestry.multiplier = interpolateWindSpeed( forceSpeed ||  windSpeed )
         })
         .catch(() => {
             windSpeed = 5.12
             speedEl.innerHTML = windSpeed
-            tapestry.multiplier = interpolateWindSpeed( windSpeed )
+            tapestry.multiplier = interpolateWindSpeed( forceSpeed || windSpeed )
         })
 }
 
 function interpolateWindSpeed( speed ) {
+
     const minIn = 0.1, maxIn = 20,
         minOut = 0.1, maxOut = 2.2
 

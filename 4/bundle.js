@@ -30,7 +30,9 @@ var camera = void 0,
     scene = void 0,
     renderer = void 0;
 
-var windSpeed = void 0;
+var urlParams = new URLSearchParams(window.location.search);
+var windSpeed = void 0,
+    forceSpeed = urlParams.get('speed');
 
 // colors : '#a4036f' '#16db93' '#2364aa' '#fec601' '#ea7317'
 
@@ -110,15 +112,16 @@ function getWindData(speedEl, recurse) {
     return (0, _d3Fetch.json)('https://api.openweathermap.org/data/2.5/weather?q=Stockholm,se&appid=ddd401e9504b3bfd92a991d52c304771').then(function (data) {
         windSpeed = +data.wind.speed;
         speedEl.innerHTML = windSpeed;
-        tapestry.multiplier = interpolateWindSpeed(windSpeed);
+        tapestry.multiplier = interpolateWindSpeed(forceSpeed || windSpeed);
     }).catch(function () {
         windSpeed = 5.12;
         speedEl.innerHTML = windSpeed;
-        tapestry.multiplier = interpolateWindSpeed(windSpeed);
+        tapestry.multiplier = interpolateWindSpeed(forceSpeed || windSpeed);
     });
 }
 
 function interpolateWindSpeed(speed) {
+
     var minIn = 0.1,
         maxIn = 20,
         minOut = 0.1,
